@@ -627,8 +627,6 @@
             </div>
         </div>
     </section>
-
-
     @include('body.latest_video')
     @include('body.popular_news')
     @include('body.feature_posts')
@@ -638,6 +636,6 @@
         </svg></div>
     <script src="{{ asset('frontpage/assets/js/vendor/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('frontpage/assets/js/app.min.js') }}"></script>
-    {{-- <script src="{{ asset('frontpage/assets/js/main.js') }}"></script> --}}
+    <script src="{{ asset('frontpage/assets/js/main.js') }}"></script>
 </body>
 </html>

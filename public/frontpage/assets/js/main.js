@@ -678,13 +678,6 @@
                 !isNaN(a) && a > 1 && s.val(a - 1);
             });
         }),
-        window.addEventListener(
-            "contextmenu",
-            function (e) {
-                e.preventDefault();
-            },
-            !1
-        ),
         (document.onkeydown = function (e) {
             return (
                 123 != event.keyCode &&
