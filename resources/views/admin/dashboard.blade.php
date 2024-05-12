@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://etikto-admin-dashboard.multipurposethemes.com/bs5/images/favicon.ico">
+    <link rel="icon" href="{{ asset('backend/images/favicon.ico') }}">
     <title>@yield('title'){{ '| HHH' }}</title>
 
     <!-- Vendors Style-->
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/vendors_css.css') }}">
+    <link rel=" stylesheet" href="{{ asset('backend/assets/css/vendors_css.css') }}">
 
     <!-- Style-->
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fBX+uJKRNhm0DS1VLDZ4OLoKGB0eZfCWp33KVj5KMl1K0Z+1iJXrENhMcaPFk8P8im4bGwv6oCYGliyF6hQbXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-fBX+uJKRNhm0DS1VLDZ4OLoKGB0eZfCWp33KVj5KMl1K0Z+1iJXrENhMcaPFk8P8im4bGwv6oCYGliyF6hQbXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
-    {{-- <link rel="stylesheet" href="{{ asset('backend/assets/icons/font-awesome/css/font-awesome.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('backend/assets/icons/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/icons/font-awesome/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/skin_color.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/css/custom.css') }}">
 </head>
@@ -24,7 +25,7 @@
 <body class="hold-transition light-skin sidebar-mini theme-primary fixed">
 
     <div class="wrapper">
-        <div id="loader"></div>
+        {{-- <div id="loader"></div> --}}
 
         @include('admin.body.header')
 
