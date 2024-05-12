@@ -5,7 +5,8 @@
                 <div class="col-auto d-none d-lg-block">
                     <div class="header-links">
                         <ul>
-                            <li><i class="fal fa-calendar-days"></i><a href="blog.html">20 August, 2023</a></li>
+                            <li><i class="fal fa-calendar-days"></i><a href="blog.html">{{ \Carbon\Carbon::now()->format('d F, Y') }}
+                                </a></li>
                             <li><a href="about.html">Privacy Policy</a></li>
                             <li><a href="about.html">Terms & Conditions</a></li>
                             <li><a class="theme-toggler" href="#"><span class="dark"><i class="fas fa-moon"></i>Dark Mode</span> <span class="light"><i class="fas fa-sun-bright"></i>Light Mode</span></a></li>
