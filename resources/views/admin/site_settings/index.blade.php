@@ -12,7 +12,7 @@
                     <h4 class="box-title mb-5">Application Buttons</h4>
                     <p class="subtitle mb-20">Add the classes <code>.btn.btn-app</code> to an <code>&lt;a&gt;</code> tag to achieve the following:</p>
                     <div class="clearfix">
-                        <a class="waves-effect waves-light btn btn-app btn-info" href="#">
+                        <a class="waves-effect waves-light btn btn-app btn-info" href="{{ route('site-settings.info') }}">
                             <i class="fa fa-edit"></i> Basic Info
                         </a>
                         <a class="waves-effect waves-light btn btn-app btn-success" href="#">

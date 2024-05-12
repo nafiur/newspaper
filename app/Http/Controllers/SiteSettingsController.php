@@ -11,4 +11,10 @@ class SiteSettingsController extends Controller
 
         return view('admin.site_settings.index');
     }
+    public function SiteInfo()
+    {
+
+        return view('admin.site_settings.info');
+    }
+
 }

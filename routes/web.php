@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(SiteSettingsController::class)->group(function () {
 
         Route::get('/admin/site-settings', 'SiteSettings')->name('site-settings');
+        Route::get('/admin/site-settings/info', 'SiteInfo')->name('site-settings.info');
 
     });
 
