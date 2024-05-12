@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontPageController;
+use App\Http\Controllers\SiteSettingsController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -12,8 +13,22 @@ use App\Http\Controllers\FrontPageController;
 Route::get('/', [FrontPageController::class, 'Index'])->name('frontpage.index');
 
 
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+});
+
+
+
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::controller(SiteSettingsController::class)->group(function () {
+
+        Route::get('/admin/site-settings', 'SiteSettings')->name('site-settings');
+
+    });
 
 });
 

@@ -6,18 +6,14 @@
                 <!-- sidebar menu-->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">Dashboard & Apps</li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
-                            <span>Dashboard</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-right pull-right"></i>
-                            </span>
+                    <li ">
+                        <a href=" {{ route('dashboard') }}">
+                        <i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+                        <span>Dashboard</span>
+                        <span class="pull-right-container">
+                        </span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="index.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 1</a></li>
-                            <li><a href="index-2.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Dashboard 2</a></li>
-                        </ul>
+
                     </li>
                     <li class="treeview">
                         <a href="#">
@@ -304,7 +300,7 @@
         </div>
     </section>
     <div class="sidebar-footer">
-        <a href="javascript:void(0)" class="link" data-bs-toggle="tooltip" title="Settings"><span class="icon-Settings-2"></span></a>
+        <a href="{{ route('site-settings') }}" class="link" data-bs-toggle="tooltip" title="Settings"><span class="icon-Settings-2"></span></a>
         <a href="mailbox.html" class="link" data-bs-toggle="tooltip" title="Email"><span class="icon-Mail"></span></a>
         <a href="javascript:void(0)" class="link" data-bs-toggle="tooltip" title="Logout"><span class="icon-Lock-overturning"><span class="path1"></span><span class="path2"></span></span></a>
     </div>
