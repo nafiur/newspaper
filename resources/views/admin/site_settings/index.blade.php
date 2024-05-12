@@ -6,7 +6,6 @@
 <!-- Content Wrapper. Contains page content -->
 <section class="content">
     <div class="row">
-
         <div class="col-12">
             <div class="box">
                 <div class="box-body">
@@ -14,7 +13,7 @@
                     <p class="subtitle mb-20">Add the classes <code>.btn.btn-app</code> to an <code>&lt;a&gt;</code> tag to achieve the following:</p>
                     <div class="clearfix">
                         <a class="waves-effect waves-light btn btn-app btn-info" href="#">
-                            <i class="fa fa-edit"></i> Edit
+                            <i class="fa fa-edit"></i> Basic Info
                         </a>
                         <a class="waves-effect waves-light btn btn-app btn-success" href="#">
                             <i class="fa fa-play"></i> Play
@@ -58,7 +57,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
 </section>
 <!-- /.content-wrapper -->
