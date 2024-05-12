@@ -178,10 +178,10 @@
             </div>
         </div>
     </div>
-    @include('body.header')
+    @include('front_page.body.header')
 
     <div>
-        @include('body.braking_news')
+        @include('front_page.body.braking_news')
     </div>
     <section class="space">
         <div class="container">
@@ -627,10 +627,10 @@
             </div>
         </div>
     </section>
-    @include('body.latest_video')
-    @include('body.popular_news')
-    @include('body.feature_posts')
-    @include('body.footer')
+    @include('front_page.body.latest_video')
+    @include('front_page.body.popular_news')
+    @include('front_page.body.feature_posts')
+    @include('front_page.body.footer')
     <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg></div>

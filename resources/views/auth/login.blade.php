@@ -1,47 +1,84 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://etikto-admin-dashboard.multipurposethemes.com/bs5/images/favicon.ico">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+    <title>Login </title>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    <!-- Vendors Style-->
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/vendors_css.css') }}">
+
+    <!-- Style-->
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/skin_color.css') }}">
+
+</head>
+
+<body class="hold-transition theme-primary bg-img" style="background-image: url({{ asset('backend/images/auth-bg/bg-2.jpg') }})">
+
+    <div class="container h-p100">
+        <div class="row align-items-center justify-content-md-center h-p100">
+
+            <div class="col-12">
+                <div class="row justify-content-center g-0">
+                    <div class="col-lg-5 col-md-5 col-12">
+                        <div class="bg-white rounded10 shadow-lg">
+                            <div class="content-top-agile p-20 pb-0">
+                                <h2 class="text-primary">Get started with Us</h2>
+                                <p class="mb-0">Register a new membership</p>
+                            </div>
+                            <div class="p-40">
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
+                                            <input type="email" class="form-control ps-15 bg-transparent" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
+                                            <input type="password" name="password" class="form-control ps-15 bg-transparent" placeholder="Password">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-info margin-top-10">Sign In</button>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <p class="mt-15 mb-0">Already have an account?<a href="{{ route('register') }}" class="text-danger ms-5"> Register </a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="mt-20 text-white">- Register With -</p>
+                            <p class="gap-items-2 mb-20">
+                                <a class="btn btn-social-icon btn-round btn-facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="btn btn-social-icon btn-round btn-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="btn btn-social-icon btn-round btn-instagram" href="#"><i class="fa fa-instagram"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    <!-- Vendor JS -->
+    <script src="{{ asset('backend/assets/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/pages/chat-popup.js') }}"></script>
+    <script src="{{ asset('backend/assets/icons/feather-icons/feather.min.js') }}"></script>
+</body>
+</html>
